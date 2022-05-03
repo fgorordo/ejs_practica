@@ -18,6 +18,10 @@ const indexController = {
     let productoSeleccionado = menu.find(element => {
       return element.id === parseInt(req.params.id);
     })
+
+    if(productoSeleccionado.descripcion === undefined) {
+      productoSeleccionado.descripcion = 'Plato tipico'
+    }
     res.render('detalleMenu', {
       productoSeleccionado : productoSeleccionado
     })
