@@ -14,26 +14,34 @@ const indexController = {
   // Detalle del menu se muestra dinamicamente
   },
   detalleMenu: (req,res) => {
-    menuID = req.params.id
-    let titulo = "";
-    let descripcion= "";
-    let precio = "";
-    menu.forEach(element => {
-      if (element.id === parseInt(menuID)) {
-        titulo = element.titulo;
-        precio = element.precio;
-        if (element.descripcion === undefined) {
-          descripcion = "Plato tipico"
-        } else {
-          descripcion = element.descripcion
-        }
-      }
+
+    let productoSeleccionado = menu.find(element => {
+      return element.id === parseInt(req.params.id);
     })
-    res.render('detalleMenu.ejs', {
-      titulo: titulo,
-      descripcion:descripcion,
-      precio: precio
+    res.render('detalleMenu', {
+      productoSeleccionado : productoSeleccionado
     })
+
+    // menuID = req.params.id
+    // let titulo = "";
+    // let descripcion= "";
+    // let precio = "";
+    // menu.forEach(element => {
+    //   if (element.id === parseInt(menuID)) {
+    //     titulo = element.titulo;
+    //     precio = element.precio;
+    //     if (element.descripcion === undefined) {
+    //       descripcion = "Plato tipico"
+    //     } else {
+    //       descripcion = element.descripcion
+    //     }
+    //   }
+    // })
+    // res.render('detalleMenu.ejs', {
+    //   titulo: titulo,
+    //   descripcion:descripcion,
+    //   precio: precio
+    // })
   }
 }
 
