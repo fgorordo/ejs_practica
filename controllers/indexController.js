@@ -56,24 +56,35 @@ const menu = [
     titulo: 'Carpaccio fresco',
     descripcion: 'Entrada Carpaccio de salmón con cítricos',
     precio: 'U$S 65.50',
+    product_img: '/images/carpaccio-de-salmon.jpg'
   },
   {
     id: 2,
     titulo: 'Rissoto de berenjena',
     descripcion: 'Rissoto de berenjena y queso de cabra',
-    precio: 'U$S 47.00'
+    precio: 'U$S 47.00',
+    product_img: '/images/Risotto-berenjena-queso-cabra.jpg'
   },
   {
     id: 3,
     titulo: 'Mousse de arroz',
     descripcion: 'Mouse de arroz con leche y armoa de azahar',
-    precio: 'U$S 27.50'
+    precio: 'U$S 27.50',
+    product_img: '/images/Mousse-de-arroz-con-leche.jpg'
   },
   {
     id: 4,
     titulo: 'Espárragos blancos',
     descripcion: 'Espárragos blancos con vinagreta de verduras y jamón ibérico',
-    precio: 'U$S 37.50'
+    precio: 'U$S 37.50',
+    product_img:'/images/esparragos.png'
+  },
+  {
+    id: 5,
+    titulo:'Ñoquis con salsa roja',
+    descripcion: 'Ñoquis con salsa roja tipo bolognesa (Pan incluido)',
+    precio: 'U$S 12.00',
+    product_img:'/images/ñoquis.jpg'
   }
   
 ]
